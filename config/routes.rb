@@ -1,4 +1,10 @@
 FEDCIM::Application.routes.draw do
+  resources :escalados_tallas
+
+
+  resources :clientes
+
+
   resources :contactos
 
 
