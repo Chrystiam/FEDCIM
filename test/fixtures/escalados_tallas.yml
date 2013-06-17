@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pieza: MyString
+  precio: 1
+
+two:
+  pieza: MyString
+  precio: 1

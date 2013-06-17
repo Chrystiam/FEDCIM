@@ -13,7 +13,7 @@ rails g scaffold escalado_talla pieza:string precio:integer --skip-stylesheets
 
 tabla patronaje basico
 
-rails g scaffld patronaje_basico pieza:string precio:integer --skip-stylesheets
+rails g scaffold patronaje_basico pieza:string precio:integer --skip-stylesheets
 
 tabla corte de prendas
 
@@ -21,4 +21,4 @@ tabla corte de prendas
 
 tabla cotizaciones
 
-rails g scaffold cotizacion escalado_talla:references precio_escala:string  patronaje_basico:references precio_patro:estring total:string --skip-stylesheets
+rails g scaffold cotizacion escalado_talla:references precio_escala:string  patronaje_basico:references precio_patro:string total:string --skip-stylesheets

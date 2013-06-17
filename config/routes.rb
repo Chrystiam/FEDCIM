@@ -1,4 +1,10 @@
 FEDCIM::Application.routes.draw do
+  resources :cotizaciones
+
+
+  resources :patronajes_basicos
+
+
   resources :escalados_tallas
 
 

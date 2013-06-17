@@ -1,0 +1,13 @@
+<%= simple_form_for(@cliente, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+  <%= f.input :nombre_empresa %>
+  <%= f.input :nombre_solicita_servicio %>
+  <%= f.input :telefono_empresa %>
+  <%= f.input :telefono_contacto %>
+  <%= f.input :correo_empresa %>
+  <%= f.input :correo_contacto %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                clientes_path, :class => 'btn' %>
+  </div>
+<% end %>
