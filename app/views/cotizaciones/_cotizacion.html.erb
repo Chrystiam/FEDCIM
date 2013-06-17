@@ -1,0 +1,8 @@
+<tr id=<%= "cotizacion_#{cotizacion.id}" %>>
+    <td><%= cotizacion.pieza %></td>
+    <td>
+	    <%= link_to 'Mostrar', cotizacion, :remote => true, :class => 'btn btn-mini' %>
+	    <%= link_to 'Editar', edit_cotizacion_path(cotizacion), :remote => true,:class => 'btn btn-mini' %>
+	    <%= link_to 'Eliminar', cotizacion, :data => { :confirm => 'Esta Seguro?' },:method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+    </td>
+</tr> 

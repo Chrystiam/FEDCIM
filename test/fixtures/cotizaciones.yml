@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  escalado_talla: 
+  precio_escala: MyString
+  patronaje_basico: 
+  precio_patro: MyString
+  total: MyString
+
+two:
+  escalado_talla: 
+  precio_escala: MyString
+  patronaje_basico: 
+  precio_patro: MyString
+  total: MyString
