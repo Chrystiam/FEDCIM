@@ -1,0 +1,11 @@
+<%= simple_form_for(@contacto, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+  <%= f.input :nombre %>
+  <%= f.input :apellido %>
+  <%= f.input :telefono %>
+  <%= f.input :celular %>
+  <%= f.input :email %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary btn-small' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),contactos_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>

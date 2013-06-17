@@ -1,0 +1,24 @@
+form contactos
+
+rails g scaffold contacto nombre:string apellido:string telefono:string celular:string email:string --skip-stylesheets
+
+
+tabla clientes
+
+rails g scaffold cliente nombre_empresa:string nombre_solicita_servicio:string telefono_empresa:string telefono_contacto:string correo_empresa:string correo_contacto:string --skip-stylesheets
+
+tabla escalado tallas
+
+rails g scaffold escalado_talla pieza:string precio:integer --skip-stylesheets
+
+tabla patronaje basico
+
+rails g scaffld patronaje_basico pieza:string precio:integer --skip-stylesheets
+
+tabla corte de prendas
+
+??
+
+tabla cotizaciones
+
+rails g scaffold cotizacion escalado_talla:references precio_escala:string  patronaje_basico:references precio_patro:estring total:string --skip-stylesheets

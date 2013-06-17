@@ -1,4 +1,7 @@
 FEDCIM::Application.routes.draw do
+  resources :contactos
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
