@@ -1,4 +1,11 @@
 FEDCIM::Application.routes.draw do
+  
+  get "pages/home"
+
+  get 'cotizaciones/cal_cost', to: 'cotizaciones#cal_cost'
+  get 'cotizaciones/cal_costp', to: 'cotizaciones#cal_costp'
+  get 'cotizaciones/total_cost', to: 'cotizaciones#total_cost'
+
   resources :cotizaciones
 
 
@@ -12,6 +19,8 @@ FEDCIM::Application.routes.draw do
 
 
   resources :contactos
+
+  root :to => 'pages#home'
 
 
   # The priority is based upon order of creation:
