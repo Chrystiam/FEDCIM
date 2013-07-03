@@ -1,22 +1,25 @@
 FEDCIM::Application.routes.draw do
-  
+
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login"  => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"
   get "pages/home"
 
   get 'cotizaciones/cal_cost', to: 'cotizaciones#cal_cost'
   get 'cotizaciones/cal_costp', to: 'cotizaciones#cal_costp'
   get 'cotizaciones/total_cost', to: 'cotizaciones#total_cost'
 
-  resources :cotizaciones
+  resources :users
 
+  resources :sessions
+
+  resources :cotizaciones
 
   resources :patronajes_basicos
 
-
   resources :escalados_tallas
 
-
   resources :clientes
-
 
   resources :contactos
 

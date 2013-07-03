@@ -48,7 +48,12 @@ class CotizacionesController < ApplicationController
   end
 
   def create
-    @cotizacion = Cotizacion.new(params[:cotizacion])
+    @cotizacion = Cotizacion.new
+    #@cotizacion.escalado_talla_id = params[:cotizacion][:escalado_talla].to_i
+    #@cotizacion.patronaje_basico_id = params[:cotizacion][:patronaje_basico].to_i
+    #@cotizacion.precio_escala = params[:cotizacion][:precio_escala].to_i
+    #@cotizacion.precio_patro = params[:cotizacion][:precio_patro].to_i
+    @cotizacion.total = params[:cotizacion][:total].to_i
     render :action => :new unless @cotizacion.save
   end
 

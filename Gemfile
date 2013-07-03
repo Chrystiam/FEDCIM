@@ -26,6 +26,8 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-will_paginate'
 gem 'simple_form'
+gem 'sorcery'
+gem "bcrypt-ruby", :require => "bcrypt"
 gem 'prawn'
 gem 'lazybox'
 
