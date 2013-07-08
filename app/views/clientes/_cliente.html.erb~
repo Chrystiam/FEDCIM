@@ -6,6 +6,7 @@
     <td><%= cliente.telefono_contacto %></td>
     <td><%= cliente.correo_empresa %></td>
     <td><%= cliente.correo_contacto %></td>
+    <td><%=l cliente.created_at %></td>
 
 	<td>
 		<%= link_to 'Mostrar', cliente, :remote => true, :class => 'btn btn-mini' %>

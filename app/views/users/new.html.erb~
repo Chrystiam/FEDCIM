@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="control-group">
-   <div class ="controls">
+   <div class ="controls"
     <%= f.submit 'crear usuario', :class => 'btn btn-info'%>
    </div>
     

@@ -10,7 +10,7 @@ p, ol, ul, td {
 }
 
 body {
-  background-color: #ECC14C;
+  background-color: #f8f8eb;
   color: #748bba;
   font-family: Helvetica  ;
   font-size: 10px;
