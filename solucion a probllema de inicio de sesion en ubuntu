@@ -1,0 +1,6 @@
+solucion a probllema de inicio de sesion en ubuntu 12.10
+
+ingresar  por consola con user root  
+y me  paro en el dir home  $ cd /home
+chown -R nombre_user:nombre_grupo nombre_user/
+chown -R  pcarmona:pcarmona pcarmona/
