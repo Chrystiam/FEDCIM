@@ -21,10 +21,12 @@ p,ol, ul, td {
   text-align:center;
 }
 
-#lazybox div.cotizacion { max-width: 500px; }
+.lazybox div.contactos { max-width: 500px; }
+
 
 .lazybox {
-  background: transparent !important;
+ 
+  background: red;
 }
 
 #lazybox_close.img {
@@ -64,9 +66,9 @@ p,ol, ul, td {
 }
 
 body {
-  background-color: #ECC14C;
+  background-color: #AF8D6B;
   color: #748bba;
-  font-family: Helvetica ;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   line-height: 20px;
 }
@@ -89,12 +91,51 @@ body {
 #ej{
 
   border-radius: 8px;
-  width: 75%;
-  height: 75%;
+  width: 50%;
+  height: 30%;
   margin: 0 auto;
   background-color: #FFF;
-  padding: 20px 40px;
+  padding: 30px;
   border: solid 1px #666;
   margin-top: 30px
+  text-align: center;
 
 }
+
+#navus{
+ 
+  text-align: right;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+footer a {
+  color: #555;
+}  
+
+footer a:hover { 
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+

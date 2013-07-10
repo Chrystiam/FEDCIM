@@ -1,4 +1,4 @@
-<%= simple_form_for @user, :html => { :class => 'form-horizontal offset3' } do |f| %>
+<%= simple_form_for @user, :html => { :class => 'form-horizontal offset3', :id => 'ej' } do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
@@ -9,6 +9,14 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field control-group">
+    <%= f.label :nombre_completo, :class => 'control-label ' %>
+    <div class ="controls">
+     <%= f.text_field :nombre %>
+    </div> 
+  </div>
+
   <div class="field control-group">
     <%= f.label :username, :class => 'control-label ' %>
     <div class ="controls">

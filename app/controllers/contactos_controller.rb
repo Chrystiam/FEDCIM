@@ -23,7 +23,7 @@ class ContactosController < ApplicationController
 
   def create
     @contacto = Contacto.new(params[:contacto])
-    render :action => :new unless @contacto.save
+    render :action => :home unless @contacto.save
   end
 
   def update

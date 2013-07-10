@@ -41,13 +41,15 @@ $(document).ready(function() {
 	     data:('presioes=' + $('#cotizacion_precio_escala').val() + '&' + 
 	      'presiopr=' + $('#cotizacion_precio_patro').val()) 
 	   });
+
+	  $('a#show_contactos_link').lazybox({closeImg: true});
+	  
+	  $('a[rel*=lazybox]').lazybox({close: false, modal: false, opacity: 0.7, klass: 'lazybox', speed: 200});
+	  $.lazybox.settings = {cancelClass: "button green", submitClass: 'button red', closeImg: false, niceClose: false}
+	  $.rails.allowAction = $.lazybox.confirm;
+
+	  $('#p1').tooltip('show') 
+	});
 });
 
-$('a#show_cotizacion_link').lazybox({closeImg: true});
-  
-  $('a[rel*=lazybox]').lazybox({close: false, modal: false, opacity: 0.7, klass: 'lazybox', speed: 200});
-  $.lazybox.settings = {cancelClass: "button green", submitClass: 'button red', closeImg: false, niceClose: false}
-  $.rails.allowAction = $.lazybox.confirm;
 
-  $('#p1').tooltip('show') 
-});
