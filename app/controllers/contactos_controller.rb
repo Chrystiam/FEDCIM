@@ -24,6 +24,7 @@ class ContactosController < ApplicationController
   def create
     @contacto = Contacto.new(params[:contacto])
     render :action => :home unless @contacto.save
+    ContactoMailer.registration_contacto(@contacto).deliver 
   end
 
   def update
