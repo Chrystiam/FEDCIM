@@ -1,16 +1,22 @@
 <%- model_class = Cliente -%>
-<div class="page-header" id="container">
+<div class="page-header">
   <h1>Clientes</h1>
 
-  <table class="table table-bordered table-condensed table-hover" >
+  <table class="table table-hover" >
     <thead>
       <tr>
-        <th>Nombre Empresa</th>
-        <th>Nombre de quien Solicita el Servicio</th>
-        <th>Telefono Empresa</th>
-        <th>Telefono Contacto</th>
-        <th>Correo Empresa</th>
-        <th>Correo Contacto</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Cedula</th>
+        <th>Empresa</th>
+        <th>Nit</th>
+        <th>Cargo</th>
+        <th>Telefono</th>
+        <th>Direccion</th>
+        <th>Celular</th>
+        <th>Fax</th>
+        <th>Email</th>
+        <th>Ubicacion</th>
       </tr>
     </thead>
     <tbody>
@@ -19,7 +25,7 @@
   </table>
 
   <tfoot>
-    <p><%= link_to "Nuevo Cliente", new_cliente_path, :remote => true, :class => 'btn btn-small btn-info' %></p>
+    <p><%= link_to "Nuevo Cliente", new_cliente_path, :remote => true, :class => 'btn btn-small btn-success' %></p>
   </tfoot>
 </div>
 

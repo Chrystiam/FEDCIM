@@ -9,9 +9,33 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require_jquery-ui
  *= require lazybox
  *= require_tree .
  */
+/*login*/
+.ej{
+
+  width: 500px;
+  padding: 50px;
+  border: 1px solid #185705;
+  color: #CACBCD;
+   
+  /*** Adding in CSS3 ***/
+
+  /*** Rounded Corners ***/
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+
+  /*** Background Gradient - 2 declarations one for Firefox and one for Webkit ***/
+  background:  -moz-linear-gradient(19% 75% 90deg,#185705, #0450A1);
+  background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#0450A1), to(#0450A1));
+
+  /*** Shadow behind the box ***/
+  -moz-box-shadow:0px -5px 10px #000;
+  -webkit-box-shadow:0px 15px 20px #000;
+}
+
 
 p,ol, ul, td {
   font-family:  arial, sans-serif;
@@ -66,7 +90,7 @@ p,ol, ul, td {
 }
 
 body {
-  background-color: #AF8D6B;
+  background-color: #009999;
   color: #748bba;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -88,20 +112,6 @@ body {
 	padding-bottom: 2%;
 }
 
-#ej{
-
-  border-radius: 8px;
-  width: 50%;
-  height: 30%;
-  margin: 0 auto;
-  background-color: #FFF;
-  padding: 30px;
-  border: solid 1px #666;
-  margin-top: 30px
-  text-align: center;
-
-}
-
 #navus{
  
   text-align: right;
@@ -117,7 +127,7 @@ footer {
 }
 
 footer a {
-  color: #555;
+  color: black;
 }  
 
 footer a:hover { 
@@ -137,5 +147,13 @@ footer ul li {
   float: left;
   margin-left: 10px;
 }
+
+.alinbot{
+  padding-left: 100px;
+}
+
+
+
+
 
 

@@ -21,26 +21,20 @@
 		<%= link_to 'contactenos', new_contacto_path, :remote => true %> 
 	</li>
 
-	<li>
-		<%= link_to "ingresar", login_path %>
-	</li>
-
 
 	<% if current_user %>
 
 	    <li>
 			<%= link_to 'clientes', clientes_path %> 
 		</li>
+	<% else %>	
 
 		<li>
-			<%= link_to "registrarse", signup_path%>
-		</li>
-
-		<li>
-			
+		   <%= link_to "ingresar", login_path %>
 	    </li>
 
 	<% end %>  
+
 		<li class="divider-vertical"></li>
 
 	

@@ -1,0 +1,12 @@
+<%= simple_form_for(@municipio, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.input :nombre, :label => "Nombre", :require => true  %>
+  <%= f.input :sigla, :label => "Sigla", :require => true  %>
+  <%= f.input :departamento_nombre, :url => autocomplete_departamento_nombre_municipios_path, :as => :autocomplete, :id_element => '#id'%>
+
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to "Atras", municipios_path, :class => 'btn-small btn-info' %>
+  </div>
+<% end %>
+

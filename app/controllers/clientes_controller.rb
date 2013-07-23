@@ -1,5 +1,7 @@
 class ClientesController < ApplicationController
 
+  autocomplete :municipio, :nombre, :full => true
+
   def index
     @clientes = Cliente.all
 

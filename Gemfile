@@ -30,6 +30,7 @@ gem 'sorcery'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'prawn'
 gem 'lazybox'
+gem 'rails3-jquery-autocomplete'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

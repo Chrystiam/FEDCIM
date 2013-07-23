@@ -6,46 +6,49 @@
 	    <%= javascript_include_tag "application" %>
 	    <%= csrf_meta_tags %>
     </head>
-  
-    <body>
-        <div>
-            <header  class="navbar navbar-fixed-top">
-                <nav class="navbar-inner">
-                    <div class="container">
-                        <div class="nav-collapse">
-                         <%= render 'layouts/navigation' %>
-                        </div> 
-                        <% if current_user %>
-                            <div class="btn-group">
-                                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user icon-white"></i> User:<%= current_user.username %></a>
-                                <ul class="dropdown-menu">
-                                    <li><%= link_to(logout_path) do %>
-                                           salir <i class="icon-briefcase"></i>
-                                        <% end %>
-                                    </li>
-                                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
-                                    <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#"><i class="i"></i> Make admin</a></li>
-                                </ul>
+    <div class="container">
+        <body>
+            <div>
+                <header  class="navbar navbar-fixed-top">
+                    <nav class="navbar-inner">
+                        <div class="container">
+                            <div class="nav-collapse">
+                             <%= render 'layouts/navigation' %>
                             </div> 
-                        <% end %>
-                    </div> 
-                </nav>
-            </header>  
-	        <%- flash.each do |name, msg| -%>
-	        <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-	        <%- end -%> 
-        </div>
-        <div>
-        <%= yield %>
-        </div>
-        <br />
-        
-		<div id="footer">
-		   <%= render 'layouts/footer' %>
-		</div>
-    </body>
+                            <% if current_user %>
+                                <div class="btn-group alinbot ">
+                                    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user icon-white "></i> User:<%= current_user.username %></a>
+                                    <ul class="dropdown-menu">
+                                        <li><%= link_to(logout_path) do %>
+                                               salir <i class="icon-briefcase"></i>
+                                            <% end %>
+                                        </li>
+                                        <li><%= link_to(signup_path) do %>
+                                               Registrar <i class="icon-briefcase"></i>
+                                            <% end %></li>
+                                        <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#"><i class="i"></i> Make admin</a></li>
+                                    </ul>
+                                </div>    
+                            <% end %>
+                        </div> 
+                    </nav>
+                </header>  
+    	        <%- flash.each do |name, msg| -%>
+    	        <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+    	        <%- end -%> 
+            </div>
+            <div>
+            <%= yield %>
+            </div>
+            <br />
+            
+    		<div>
+    		   <%= render 'layouts/footer' %>
+    		</div>
+        </body>
+    </div>
 </html>
 
 

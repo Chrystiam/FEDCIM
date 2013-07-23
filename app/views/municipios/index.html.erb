@@ -1,0 +1,22 @@
+<%- model_class = Municipio -%>
+<div class="page-header">
+  <div class="page-header">
+    <h1>Municipios</h1>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Nombre</th>
+        <th>Sigla</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @municipios %>
+    </tbody>
+  </table>
+  <tfoot>
+    <%= link_to "Nuevo Munnicipio", new_municipio_path, :remote => true, :class => 'btn btn-primary' %>
+  </tfoot>
+</div>

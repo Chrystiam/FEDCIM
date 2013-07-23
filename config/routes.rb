@@ -1,5 +1,13 @@
 FEDCIM::Application.routes.draw do
 
+  resources :municipios do
+    get :autocomplete_departamento_nombre, :on => :collection
+  end 
+
+
+  resources :departamentos
+
+
   get "logout" => "sessions#destroy", :as => "logout"
   get "login"  => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
@@ -19,8 +27,10 @@ FEDCIM::Application.routes.draw do
 
   resources :escalados_tallas
 
-  resources :clientes
-
+  resources :clientes do 
+    get :autocomplete_municipio_nombre, :on => :collection  
+  end
+  
   resources :contactos
 
   root :to => 'pages#home'

@@ -11,18 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130703035714) do
+ActiveRecord::Schema.define(:version => 20130721215516) do
 
   create_table "clientes", :force => true do |t|
-    t.string   "nombre_empresa"
-    t.string   "nombre_solicita_servicio"
-    t.string   "telefono_empresa"
-    t.string   "telefono_contacto"
-    t.string   "correo_empresa"
-    t.string   "correo_contacto"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.string   "nombres"
+    t.string   "apellidos"
+    t.string   "cedula"
+    t.string   "empresa"
+    t.string   "nit"
+    t.string   "cargo"
+    t.string   "telefono"
+    t.string   "direccion"
+    t.string   "celular"
+    t.string   "fax"
+    t.string   "email"
+    t.integer  "municipio_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
+
+  add_index "clientes", ["municipio_id"], :name => "index_clientes_on_municipio_id"
 
   create_table "contactos", :force => true do |t|
     t.string   "nombre"
@@ -47,12 +55,29 @@ ActiveRecord::Schema.define(:version => 20130703035714) do
   add_index "cotizaciones", ["escalado_talla_id"], :name => "index_cotizaciones_on_escalado_talla_id"
   add_index "cotizaciones", ["patronaje_basico_id"], :name => "index_cotizaciones_on_patronaje_basico_id"
 
+  create_table "departamentos", :force => true do |t|
+    t.string   "nombre"
+    t.string   "sigla"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "escalados_tallas", :force => true do |t|
     t.string   "pieza"
     t.integer  "precio"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "municipios", :force => true do |t|
+    t.string   "nombre"
+    t.string   "sigla"
+    t.integer  "departamento_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "municipios", ["departamento_id"], :name => "index_municipios_on_departamento_id"
 
   create_table "patronajes_basicos", :force => true do |t|
     t.string   "pieza"

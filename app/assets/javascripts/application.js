@@ -15,6 +15,8 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap
+//= require autocomplete-rails
+//= require jquery-ui
 //= require_tree .
 
 $(document).ready(function() {
@@ -28,5 +30,6 @@ $(document).ready(function() {
       $('#p1').tooltip('show') 
 	
 });
+
 
 
