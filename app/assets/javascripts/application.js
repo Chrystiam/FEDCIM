@@ -24,9 +24,10 @@ $(document).ready(function() {
 
 	  $('a#show_contactos_link').lazybox({closeImg: true});
 	  
-	  $('a[rel*=lazybox]').lazybox({close: false, modal: false, opacity: 0.7, klass: 'lazybox', speed: 200});
+	  $('a[rel*=lazybox]').lazybox({close: false, modal: false, opacity: 0.7, klass: 'lazybox', speed: 200, margin: '30px' });
 	  $.lazybox.settings = {cancelClass: "button green", submitClass: 'button red', closeImg: false, niceClose: false}
 	  $.rails.allowAction = $.lazybox.confirm;
+	  $('new_clientes#lazybox').css({margin:'30px' });
       $('#p1').tooltip('show') 
 	
 });

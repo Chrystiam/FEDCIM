@@ -18,13 +18,13 @@
             <a class="btn btn-mini dropdown-toggle btn-success" data-toggle="dropdown" href="#"><span class="caret"></span>Action
             
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu anchmenu">
            
                 <p><%= link_to 'Mostrar', cliente, :remote => true, :class => 'btn btn-mini btn-success' %></p>
-                <%= link_to 'Editar', edit_cliente_path(cliente), :remote => true, :class => 'btn btn-mini' %>
-                <%= link_to 'Eliminar', cliente,  :data => { :confirm => 'Esta Seguro?' }, :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+                <p><%= link_to 'Editar', edit_cliente_path(cliente), :remote => true, :class => 'btn btn-mini' %></p>
+                <p><%= link_to 'Eliminar', cliente,  :data => { :confirm => 'Esta Seguro?' }, :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %></p>
             </ul>
-        </div>
+      </div>
 	</td>
 </tr>
 

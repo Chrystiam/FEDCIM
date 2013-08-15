@@ -14,9 +14,19 @@
  *= require_tree .
  */
 /*login*/
-.ej{
 
-  width: 500px;
+.btuser{
+  margin-left: 257px;
+}
+
+
+.posi{
+  padding-right: 100%;
+}
+
+.ej{
+  width: 377px;
+  /*width: 500px;*/
   padding: 50px;
   border: 1px solid #185705;
   color: #CACBCD;
@@ -148,9 +158,6 @@ footer ul li {
   margin-left: 10px;
 }
 
-.alinbot{
-  padding-left: 100px;
-}
 
 
 

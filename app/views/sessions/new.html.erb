@@ -1,7 +1,7 @@
 <%= form_tag sessions_path, :class => 'form-horizontal   ej' do |f| %>
-  <div class="input-append resposive ">
+  <div class="input-append offset">
 
-    <div class="field control-group" >
+    <div class="control-group " >
         <label class="control-label" for="inputEmail">Nombre de Usuario</label>
       <div class ="controls">
        <%= text_field_tag :username, params[:username] %>
@@ -27,6 +27,6 @@
       <div class="control-group offset3">
         <%= submit_tag "Ingresar", :class => 'btn btn-info' %>
       </div>
-
+    </div>  
   </div>  
 <% end %>
