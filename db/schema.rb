@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130721215516) do
+ActiveRecord::Schema.define(:version => 20130815222212) do
 
   create_table "clientes", :force => true do |t|
     t.string   "nombres"
@@ -38,6 +38,9 @@ ActiveRecord::Schema.define(:version => 20130721215516) do
     t.string   "telefono"
     t.string   "celular"
     t.string   "email"
+    t.integer  "año"
+    t.integer  "mes"
+    t.integer  "dia"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -60,6 +63,15 @@ ActiveRecord::Schema.define(:version => 20130721215516) do
     t.string   "sigla"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "documentos", :force => true do |t|
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "precios_file_name"
+    t.string   "precios_content_type"
+    t.integer  "precios_file_size"
+    t.datetime "precios_updated_at"
   end
 
   create_table "escalados_tallas", :force => true do |t|

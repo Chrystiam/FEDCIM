@@ -1,5 +1,10 @@
 FEDCIM::Application.routes.draw do
 
+  get "stats" => "stats#index", :as => "stats"
+
+  resources :documentos
+
+
   resources :municipios do
     get :autocomplete_departamento_nombre, :on => :collection
   end 

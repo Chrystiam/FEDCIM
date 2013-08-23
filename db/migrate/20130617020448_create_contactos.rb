@@ -6,6 +6,9 @@ class CreateContactos < ActiveRecord::Migration
       t.string :telefono
       t.string :celular
       t.string :email
+      t.integer :año
+      t.integer :mes
+      t.integer :dia
 
       t.timestamps
     end

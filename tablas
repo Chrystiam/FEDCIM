@@ -34,3 +34,7 @@ rails g scaffold departamento nombre:string sigla:string --skip-stylesheets
 tabla municipios
 
 rails g scaffold municipio nombre:string sigla:string departamento:references --skip-stylesheets
+
+tabla documentos
+
+rails g scaffold documento --skip-stylesheets

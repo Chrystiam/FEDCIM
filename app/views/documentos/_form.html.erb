@@ -1,0 +1,10 @@
+<%= simple_form_for @documento, :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+
+  <%= f.file_field :precios,  :label => "Precios" %>
+
+    <div class="form-actions">
+	    <%= f.button :submit, :class => 'btn-primary' %>
+	    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+	    documentos_path, :class => 'btn' %>
+    </div>
+<% end %>

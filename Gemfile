@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'googlecharts'
 gem 'json'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
@@ -31,6 +32,7 @@ gem "bcrypt-ruby", :require => "bcrypt"
 gem 'prawn'
 gem 'lazybox'
 gem 'rails3-jquery-autocomplete'
+gem 'paperclip'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

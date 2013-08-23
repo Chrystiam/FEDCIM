@@ -54,11 +54,15 @@
     </div>
 
     <div id="mod">
-        <p class="muted pull-right"><a  href="#myModal3"  role="button" class="pull-right btn-info btn-small " data-toggle="modal" title="Ver Informacion">Encargados</a></p>
+        <!--<p class="muted pull-right"><a  href="#myModal3"  role="button" class="pull-right btn-info btn-small " data-toggle="modal" title="Ver Informacion">Encargados</a></p>-->
        
-        <p class="muted pull-right"><a  href="#myModal2"  role="button" class="pull-right btn-info btn-small" data-toggle="modal" title="Ver Informacion">Servicios</a></p>
+        <p class="muted pull-right"><a  href="#myModal2"  role="button" class="pull-right btn-success btn-small" data-toggle="modal" title="Ver Informacion">Servicios</a></p>
 
-        <p class="muted pull-right"><a  href="#myModal1"  role="button" class="pull-right btn-info btn-small" data-toggle="modal" title="Ver Informacion">Servicios de Diseño y Molderia</a></p>
+        <p class="muted pull-right"><a  href="#myModal1"  role="button" class="pull-right btn-success btn-small" data-toggle="modal" title="Ver Informacion">Servicios de Diseño y Molderia</a></p>
+
+        <% @documentos.each do |documento| %>
+            <%= link_to 'Precios Servicios Tecnologicos', documento.precios.url, :class => 'btn btn-success btn-small' %>
+        <% end %>
     </div>
 </div>    
    

@@ -22,18 +22,34 @@
                             </div> 
                             <% if current_user %>
                                 <div class="btn-group btuser">
-                                    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><i class="  icon-user icon-white "></i> User:<%= current_user.username %></a>
-                                    <ul class="dropdown-menu">
-                                        <li><%= link_to(logout_path) do %>
-                                               salir <i class="icon-briefcase"></i>
+                                    <a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#"><i class="  icon-user icon-white "></i> User:<%= current_user.username %></a>
+                                    <ul class="dropdown-menu span1">
+                                        <li>
+                                            <%= link_to(logout_path) do %>
+                                               salir <i class=" icon-lock"></i>
                                             <% end %>
                                         </li>
-                                        <li><%= link_to(signup_path) do %>
-                                               Registrar <i class="icon-briefcase"></i>
-                                            <% end %></li>
-                                        <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+                                        <li>
+                                            <%= link_to((signup_path),  :remote => true) do %>
+                                               Registrar Usuarios<i class=" icon-wrench"></i>
+                                            <% end %>
+                                        </li>
+                                        <li>
+                                            <%= link_to(users_path) do %>
+                                               Usuarios <i class=" icon-wrench"></i>
+                                            <% end %>
+                                        </li>
+                                        <li>
+                                            <%= link_to(stats_path) do %>
+                                               Estadisticas <i class=" icon-wrench"></i>
+                                            <% end %>
+                                        </li>
                                         <li class="divider"></li>
-                                        <li><a href="#"><i class="i"></i> Make admin</a></li>
+                                        <li>
+                                            <%= link_to(documentos_path) do %>
+                                               Documentos <i class=" icon-wrench"></i>
+                                            <% end %>
+                                        </li>
                                     </ul>
                                 </div>    
                             <% end %>
