@@ -35,6 +35,7 @@ GEM
     bootstrap-will_paginate (0.0.9)
       will_paginate
     builder (3.0.4)
+    cancan (1.6.9)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
@@ -130,6 +131,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.4)
+    rolify (3.2.0)
     ruby-rc4 (0.1.5)
     sass (3.2.8)
     sass-rails (3.2.6)
@@ -173,6 +175,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   bootstrap-will_paginate
+  cancan
   coffee-rails (~> 3.2.1)
   googlecharts
   jquery-rails
@@ -184,6 +187,7 @@ DEPENDENCIES
   prawn
   rails (= 3.2.13)
   rails3-jquery-autocomplete
+  rolify
   sass-rails (~> 3.2.3)
   simple_form
   sorcery
