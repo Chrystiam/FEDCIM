@@ -21,3 +21,17 @@ class CreateClientes < ActiveRecord::Migration
   end
 end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

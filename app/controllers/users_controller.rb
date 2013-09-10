@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  load_and_authorize_resource :only => [:new, :edit, :destroy]
+  #load_and_authorize_resource :only => [:new, :edit, :destroy]
 
   def index
     @users = User.all

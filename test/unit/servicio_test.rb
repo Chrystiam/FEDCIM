@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PatronajeBasicoTest < ActiveSupport::TestCase
+class ServicioTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -35,6 +35,8 @@ gem 'rails3-jquery-autocomplete'
 gem 'paperclip'
 gem 'cancan'
 gem 'rolify'
+gem 'seed_dump'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -31,13 +31,18 @@
                                             <% end %>
                                         </li>
                                         <li>
-                                            <%= link_to((signup_path),  :remote => true) do %>
-                                               Registrar Usuarios<i class=" icon-wrench"></i>
+                                            <%= link_to(users_path) do %>
+                                               Usuarios <i class=" icon-wrench"></i>
                                             <% end %>
                                         </li>
                                         <li>
-                                            <%= link_to(users_path) do %>
-                                               Usuarios <i class=" icon-wrench"></i>
+                                            <%= link_to(departamentos_path) do %>
+                                            Departamentos<i class=" icon-wrench"></i>
+                                            <% end %>
+                                        </li>
+                                        <li>
+                                            <%= link_to(municipios_path) do %>
+                                            Municipios<i class=" icon-wrench"></i>
                                             <% end %>
                                         </li>
                                         <li>

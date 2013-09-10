@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130826164028) do
+ActiveRecord::Schema.define(:version => 20130910023831) do
 
   create_table "clientes", :force => true do |t|
     t.string   "nombres"
@@ -46,17 +46,16 @@ ActiveRecord::Schema.define(:version => 20130826164028) do
   end
 
   create_table "cotizaciones", :force => true do |t|
-    t.integer  "escalado_talla_id"
-    t.integer  "precio_escala"
-    t.integer  "patronaje_basico_id"
-    t.integer  "precio_patro"
+    t.integer  "servicio_id"
+    t.integer  "detalle_id"
+    t.integer  "precio"
     t.integer  "total"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
-  add_index "cotizaciones", ["escalado_talla_id"], :name => "index_cotizaciones_on_escalado_talla_id"
-  add_index "cotizaciones", ["patronaje_basico_id"], :name => "index_cotizaciones_on_patronaje_basico_id"
+  add_index "cotizaciones", ["detalle_id"], :name => "index_cotizaciones_on_detalle_id"
+  add_index "cotizaciones", ["servicio_id"], :name => "index_cotizaciones_on_servicio_id"
 
   create_table "departamentos", :force => true do |t|
     t.string   "nombre"
@@ -65,6 +64,16 @@ ActiveRecord::Schema.define(:version => 20130826164028) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "detalles", :force => true do |t|
+    t.string   "pieza"
+    t.integer  "precio"
+    t.integer  "servicio_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "detalles", ["servicio_id"], :name => "index_detalles_on_servicio_id"
+
   create_table "documentos", :force => true do |t|
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
@@ -72,13 +81,6 @@ ActiveRecord::Schema.define(:version => 20130826164028) do
     t.string   "precios_content_type"
     t.integer  "precios_file_size"
     t.datetime "precios_updated_at"
-  end
-
-  create_table "escalados_tallas", :force => true do |t|
-    t.string   "pieza"
-    t.integer  "precio"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "municipios", :force => true do |t|
@@ -91,13 +93,6 @@ ActiveRecord::Schema.define(:version => 20130826164028) do
 
   add_index "municipios", ["departamento_id"], :name => "index_municipios_on_departamento_id"
 
-  create_table "patronajes_basicos", :force => true do |t|
-    t.string   "pieza"
-    t.integer  "precio"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "roles", :force => true do |t|
     t.string   "name"
     t.integer  "resource_id"
@@ -108,6 +103,12 @@ ActiveRecord::Schema.define(:version => 20130826164028) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
+
+  create_table "servicios", :force => true do |t|
+    t.string   "nombre"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "nombre"

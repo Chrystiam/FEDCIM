@@ -10,7 +10,7 @@ class CotizacionesController < ApplicationController
   end
 
   def cal_cost
-   input = EscaladoTalla.where("id = ?",params[:id]).first
+   input = Detalle.where("id = ?",params[:id]).first
    @costo = input.precio
     respond_to do |format|
       format.js { render 'cal_cost' } #cal_cost.js.erb
@@ -41,6 +41,8 @@ class CotizacionesController < ApplicationController
 
   def new
     @cotizacion = Cotizacion.new
+    @detalles = Detalle.all
+    @servicio = Servicio.all
   end
 
   def edit
@@ -53,8 +55,13 @@ class CotizacionesController < ApplicationController
     #@cotizacion.patronaje_basico_id = params[:cotizacion][:patronaje_basico].to_i
     #@cotizacion.precio_escala = params[:cotizacion][:precio_escala].to_i
     #@cotizacion.precio_patro = params[:cotizacion][:precio_patro].to_i
-    @cotizacion.total = params[:cotizacion][:total].to_i
+    #@cotizacion.total = params[:cotizacion][:total].to_i
     render :action => :new unless @cotizacion.save
+  end
+
+  def update_detalle
+    @detalles =  Detalle.where('servicio_id=?', params[:servicio_id])
+    render :partial => "detalle", :object => @detalles
   end
 
   def update

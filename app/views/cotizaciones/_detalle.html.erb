@@ -1,0 +1,7 @@
+<%= javascript_include_tag "cotiza.js" %>
+<div class="control-group" id="esctDi">
+	<label class="control-label" for="inputName">Numero de Piezas</label>
+	<div class="controls">
+	 <%= collection_select(:cotizacion, :detalle_id, @detalles, :id, :pieza, :prompt => 'Seleccione la cantidad') %>
+	</div>
+</div>

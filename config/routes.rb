@@ -1,4 +1,10 @@
 FEDCIM::Application.routes.draw do
+  get 'cotizaciones/update_detalle', to: 'cotizaciones#update_detalle'
+  resources :detalles
+
+
+  resources :servicios
+
 
   get "stats" => "stats#index", :as => "stats"
 
@@ -29,9 +35,6 @@ FEDCIM::Application.routes.draw do
   resources :cotizaciones
 
   resources :patronajes_basicos
-
-  resources :escalados_tallas
-
   resources :clientes do 
     get :autocomplete_municipio_nombre, :on => :collection  
   end

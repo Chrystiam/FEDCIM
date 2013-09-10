@@ -3,7 +3,9 @@
 one:
   pieza: MyString
   precio: 1
+  servicio: 
 
 two:
   pieza: MyString
   precio: 1
+  servicio: 

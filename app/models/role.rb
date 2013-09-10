@@ -3,4 +3,11 @@ class Role < ActiveRecord::Base
   belongs_to :resource, :polymorphic => true
   
   scopify
+
+  #has_and_belongs_to_many :users
+  #belongs_to :resource, :polymorphic => true
+
+  def self.act
+  		role = Role.all
+  end
 end

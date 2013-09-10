@@ -1,5 +1,5 @@
 class Cotizacion < ActiveRecord::Base
-  belongs_to :escalado_talla
-  belongs_to :patronaje_basico
-  attr_accessible :precio_escala, :precio_patro, :total, :escalado_talla, :patronaje_basico
+  belongs_to :servicio
+  belongs_to :detalle
+  attr_accessible :precio, :total, :servicio_id, :detalle_id
 end

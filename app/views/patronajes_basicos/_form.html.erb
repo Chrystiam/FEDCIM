@@ -1,9 +1,0 @@
-<%= simple_form_for @patronaje_basico, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :pieza %>
-  <%= f.input :precio %>
-  <div class="form-actions">
-    <%= f.button :submit, :class => 'btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                patronajes_basicos_path, :class => 'btn' %>
-  </div>
-<% end %>

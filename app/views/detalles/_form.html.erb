@@ -1,0 +1,15 @@
+<%= simple_form_for @detalle, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :pieza %>
+  <%= f.input :precio %>
+    <div  class="control-group">
+	    <label class="control-label" for="inputName">Servicios</label>
+	    <div class="controls">
+	      <%= f.collection_select :servicio_id, Servicio.all,:id,:nombre, :order => 'nombre', :label => false, :required => true, :prompt => "Seleccione un Servicio",:input_html => {:class => 'span2' }  %>
+	    </div>
+    </div>
+	<div class="form-actions">
+		<%= f.button :submit, :class => 'btn-primary' %>
+		<%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+		detalles_path, :class => 'btn' %>
+	</div>
+<% end %>
