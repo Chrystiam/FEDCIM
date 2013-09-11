@@ -61,9 +61,6 @@ Servicio.create([
 ], :without_protection => true )
 
 
-
-User.create([
-  { :nombre => "christiam camilo", :telefono => nil, :username => "cristiam", :email => "Cristiam@misena.edu", :crypted_password => "$2a$10$AMfYgbo1897Jtrm7eEu/D./f82pide9xZ4E64RCfRWUtms0vnyoHm", :salt => "5fBSsxtX8vnPhuq26VTs", :created_at => "2013-09-11 04:29:40", :updated_at => "2013-09-11 04:29:40", :remember_me_token => nil, :remember_me_token_expires_at => nil }
-], :without_protection => true )
-
-
+users = User.create([
+ { :id => 1, :nombre => "christiam camilo", :username => "admin", :email => "pcarmona@misena.edu.co", :password => "admin"}
+])
