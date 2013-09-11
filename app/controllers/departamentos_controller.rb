@@ -1,5 +1,5 @@
 class DepartamentosController < ApplicationController
-
+  load_and_authorize_resource :only => [:new, :edit, :destroy]
   def index
     @departamentos = Departamento.all
 

@@ -5,8 +5,8 @@
   <%= f.input :departamento_nombre, :url => autocomplete_departamento_nombre_municipios_path, :as => :autocomplete, :id_element => '#id'%>
 
   <div class="form-actions">
-    <%= f.button :submit, :class => 'btn-primary' %>
-    <%= link_to "Atras", municipios_path, :class => 'btn-small btn-info' %>
+    <%= f.button :submit, :class => 'btn btn-primary btn-small' %>
+    <%= link_to "Atras", municipios_path, :class => 'btn btn-small btn-info' %>
   </div>
 <% end %>
 

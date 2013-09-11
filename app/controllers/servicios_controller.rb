@@ -1,4 +1,5 @@
 class ServiciosController < ApplicationController
+  load_and_authorize_resource :only => [:new, :edit, :destroy]
   # GET /servicios
   # GET /servicios.json
   def index

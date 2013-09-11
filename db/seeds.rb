@@ -3,13 +3,16 @@
 # Do not hesitate to tweak this to your needs
 
 Cliente.create([
-  { :nombres => nil, :apellidos => nil, :cedula => nil, :empresa => nil, :nit => nil, :cargo => nil, :telefono => nil, :direccion => nil, :celular => nil, :fax => nil, :email => nil, :municipio_id => nil, :created_at => nil, :updated_at => nil }
+  { :nombres => "juan", :apellidos => "gomez", :cedula => "123456687", :empresa => "", :nit => "", :cargo => "", :telefono => "45567788", :direccion => "cr 45 #45-67", :celular => "32147484848", :fax => "373834", :email => "juan@gmail.com", :municipio_id => 1, :created_at => "2013-09-11 05:31:42", :updated_at => "2013-09-11 05:31:42" },
+  { :nombres => "juan", :apellidos => "gomez", :cedula => "123456687", :empresa => "", :nit => "", :cargo => "", :telefono => "45567788", :direccion => "cr 45 #45-67", :celular => "32147484848", :fax => "373834", :email => "juan@gmail.com", :municipio_id => 1, :created_at => "2013-09-11 05:33:11", :updated_at => "2013-09-11 05:33:11" },
+  { :nombres => "calos", :apellidos => "suares", :cedula => "1234567", :empresa => "carlos.SA", :nit => "6785", :cargo => "gerente", :telefono => "45634657", :direccion => "cr 56 #67-43", :celular => "4566768", :fax => "345667", :email => "carlos@hotmail.com", :municipio_id => 2, :created_at => "2013-09-11 05:49:22", :updated_at => "2013-09-11 05:49:22" }
 ], :without_protection => true )
 
 
 
 Contacto.create([
-  { :nombre => nil, :apellido => nil, :telefono => nil, :celular => nil, :email => nil, :año => nil, :mes => nil, :dia => nil, :created_at => nil, :updated_at => nil }
+  { :nombre => "geraldine", :apellido => "arenas", :telefono => "3453465", :celular => "3212339941", :email => "geral@gmail.com", :año => 2013, :mes => 9, :dia => 11, :created_at => "2013-09-11 05:54:08", :updated_at => "2013-09-11 05:54:08" },
+  { :nombre => "cristiam ", :apellido => "gomez", :telefono => "234567", :celular => "2334567889", :email => "cristiam@hotamail.com", :año => 2013, :mes => 5, :dia => 11, :created_at => "2013-05-11 05:52:30", :updated_at => "2013-09-11 05:52:30" }
 ], :without_protection => true )
 
 
@@ -47,7 +50,7 @@ Municipio.create([
 
 
 Role.create([
-  { :name => nil, :resource_id => nil, :resource_type => nil, :created_at => nil, :updated_at => nil }
+  { :name => "admin", :resource_id => nil, :resource_type => nil, :created_at => "2013-09-11 03:26:38", :updated_at => "2013-09-11 03:26:38" }
 ], :without_protection => true )
 
 
@@ -60,7 +63,7 @@ Servicio.create([
 
 
 User.create([
-  { :nombre => "Christiam Gomez", :telefono => nil, :username => "christiam", :email => "christiam@misena.edu", :crypted_password => "$2a$10$cdCv/Zs7hQqrEEREiKDqFO1hn3cDUTd6gfqthx6KfpemSBX2vrYnC", :salt => "uDV37o1Et4e1mzUfWdUa", :created_at => "2013-09-10 04:55:00", :updated_at => "2013-09-10 04:55:00", :remember_me_token => nil, :remember_me_token_expires_at => nil }
+  { :nombre => "christiam camilo", :telefono => nil, :username => "cristiam", :email => "Cristiam@misena.edu", :crypted_password => "$2a$10$AMfYgbo1897Jtrm7eEu/D./f82pide9xZ4E64RCfRWUtms0vnyoHm", :salt => "5fBSsxtX8vnPhuq26VTs", :created_at => "2013-09-11 04:29:40", :updated_at => "2013-09-11 04:29:40", :remember_me_token => nil, :remember_me_token_expires_at => nil }
 ], :without_protection => true )
 
 

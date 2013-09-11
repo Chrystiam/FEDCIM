@@ -1,5 +1,5 @@
 class ClientesController < ApplicationController
-
+  load_and_authorize_resource :only => [:new, :edit, :destroy]
   autocomplete :municipio, :nombre, :full => true
 
   def index

@@ -1,4 +1,5 @@
 class DocumentosController < ApplicationController
+  load_and_authorize_resource :only => [:new, :edit, :destroy]
   # GET /documentos
   # GET /documentos.json
   def index

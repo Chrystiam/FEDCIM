@@ -1,5 +1,5 @@
 class ContactosController < ApplicationController
-
+  load_and_authorize_resource :only => [:new, :edit, :destroy]
   def index
     @contactos = Contacto.all
     respond_to do |format|

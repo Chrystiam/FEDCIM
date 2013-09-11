@@ -1,5 +1,5 @@
 class MunicipiosController < ApplicationController
-
+  load_and_authorize_resource :only => [:new, :edit, :destroy]
   autocomplete :departamento, :nombre, :full => true
   
   def index

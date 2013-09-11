@@ -1,5 +1,5 @@
 class CotizacionesController < ApplicationController
-
+  load_and_authorize_resource :only => [:new, :edit, :destroy]
   def index
     @cotizaciones = Cotizacion.all
 

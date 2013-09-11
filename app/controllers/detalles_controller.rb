@@ -1,4 +1,5 @@
 class DetallesController < ApplicationController
+  load_and_authorize_resource :only => [:new, :edit, :destroy]
   # GET /detalles
   # GET /detalles.json
   def index
