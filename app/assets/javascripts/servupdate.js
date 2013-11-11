@@ -5,19 +5,18 @@ $(document).ready(function(){
     $("#cotizacion_precio").val("0");
     $("#cotizacion_total").val("0");
 
-    $('#cotizacion_servicio_id').change(function(e){
-         var servn = $(this).val()
-    
+    $('#cotizacion_servicio_id').bind("keydown change keyup",function(e){
+        var servn = $(this).val()
+   
     	
         if (servn != "") {
-            $("#none").css('display','block');
     		$("#esctDi").css('display','block');
-            update_detalle(servn)
-        }
-    	else{
-            $("#none").css('display','none');
+            update_detalle(servn);
+        }else{
+            $("#none").css('display','none')
     		$("#esctDi").css('display','none');
     	};
+
 
         function update_detalle(servicio_id) {  
             jQuery.ajax({
@@ -29,17 +28,11 @@ $(document).ready(function(){
                   jQuery("#esctDi").html(data);
                 }
             });    
-        }
-        /*
-        function update_precio(servicio_id) {  
-            jQuery.ajax({
-                url: "/cotizaciones/cal_cost",
-                type: "GET",
-                data: {"id" : servicio_id}
-            });    
-        }
-        */
-    });
+        };
+    }); 
+    
+    
+     
 });
 
 

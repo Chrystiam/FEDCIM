@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="shortcut icon" href="assets/icon_50x50.png"/>
+        <link rel="shortcut icon" href="assets/logofedcimm.png"/>
 	    <title>FEDCIM</title>
 	    <%= stylesheet_link_tag "application", :media => "all" %>
 	    <%= javascript_include_tag "application" %>
@@ -66,11 +66,11 @@
     	        <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
     	        <%- end -%> 
             </div>
-            <div class="responsive">
+            <div class="responsive" >
                 <%= yield %>
             </div>
             <br/>
-            <div>
+            <div id="foot">
     		   <%= render 'layouts/footer' %>
     		</div>
         </body>

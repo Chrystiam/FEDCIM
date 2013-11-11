@@ -1,5 +1,7 @@
 FEDCIM::Application.routes.draw do
+
   get 'cotizaciones/update_detalle', to: 'cotizaciones#update_detalle'
+  
   resources :detalles
 
 

@@ -19,13 +19,13 @@
           <div class="control-group" id="none">
             <label class="control-label" for="inputName">Precio</label>
             <div class="control-group" id="none">
-              <%= f.input :precio , :label => false, :required => true, :input_html => {:class => 'span2', :disabled => true  } %>
+              <%= f.input :precio , :label => false, :required => true, :input_html => {:class => 'span2', :readonly => true  } %>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="inputName">total</label>
             <div class="control-group">
-              <%= f.input :total , :label => false, :required => true, :input_html => {:class => 'span2', :disabled => true   } %>
+              <%= f.input :total , :label => false, :required => true, :input_html => {:class => 'span2',:readonly => true  } %>
             </div>
           </div>
         </div>  

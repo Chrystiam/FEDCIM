@@ -1,11 +1,12 @@
 class CotizacionesController < ApplicationController
-  load_and_authorize_resource :only => [:new, :edit, :destroy]
+  #load_and_authorize_resource :only => [:new, :edit, :destroy]
   def index
     @cotizaciones = Cotizacion.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @cotizaciones }
+      format.xml {render xml: @cotizaciones}
     end
   end
 
@@ -27,8 +28,7 @@ class CotizacionesController < ApplicationController
 
   def total_cost
     presioes = params[:presioes]
-    presiopr = params[:presiopr]
-    @costot = presioes.to_f + presiopr.to_f
+    @costot = presioes.to_f 
 
     respond_to do |format|
       format.js {render 'total_cost'}
@@ -42,7 +42,7 @@ class CotizacionesController < ApplicationController
   def new
     @cotizacion = Cotizacion.new
     @detalles = Detalle.all
-    @servicio = Servicio.all
+    #@servicio = Servicio.all
   end
 
   def edit
@@ -50,12 +50,12 @@ class CotizacionesController < ApplicationController
   end
 
   def create
+
     @cotizacion = Cotizacion.new
-    #@cotizacion.escalado_talla_id = params[:cotizacion][:escalado_talla].to_i
-    #@cotizacion.patronaje_basico_id = params[:cotizacion][:patronaje_basico].to_i
-    #@cotizacion.precio_escala = params[:cotizacion][:precio_escala].to_i
-    #@cotizacion.precio_patro = params[:cotizacion][:precio_patro].to_i
-    #@cotizacion.total = params[:cotizacion][:total].to_i
+    @cotizacion.servicio_id = params[:cotizacion][:servicio_id].to_i
+    @cotizacion.detalle_id = params[:cotizacion][:detalle_id].to_i
+    @cotizacion.precio = params[:cotizacion][:precio].to_i
+    @cotizacion.total = params[:cotizacion][:total].to_i
     render :action => :new unless @cotizacion.save
   end
 

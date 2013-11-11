@@ -1,4 +1,7 @@
 <tr id=<%= "cotizacion_#{cotizacion.id}" %>>
+	<td><%= cotizacion.servicio.nombre%></td>
+	<td><%= cotizacion.detalle.pieza%></td>
+	<td><%= cotizacion.precio%></td>
     <td><%= cotizacion.total %></td>
     <td>
 	    <%= link_to 'Mostrar', cotizacion, :remote => true, :class => 'btn btn-mini' %>

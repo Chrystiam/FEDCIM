@@ -45,5 +45,6 @@
 	    :data => @numcon.values,
 	    :axis_with_labels => 'x,y',
 	    :axis_labels =>  [@numcon.values])
+	    
 	end
 end

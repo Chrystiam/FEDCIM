@@ -1,4 +1,4 @@
-<div class="responsive" id="container">
+<div class="responsive" id="container" >
     <div>
         <h1>FEDCIM</h1>
         <p>FEDCIM  es creada para el centro  Diseño de la aplicacion para el Centro de Formacion en Diseño, Confeccion y Moda SENA.Su fin es dar una manera de vender los servicios que brinda con  la maquina  miilan </p>
@@ -10,22 +10,22 @@
             <h5 id="myModalLabel">Servicios</h5>
         </div>
 
-        <div class="modal-body">
+        <div class="modal-body" id="imgenmod1">
             <div class="control-group">
                 <div class="row">
                     <div class="span4">
-                        <p>Diseño de colecciones</p>
-                        <p>Dijitalizacion de Moldes</p>
-                        <p>Elaboracion de Molderia: Molde patrón</p>
-                        <p>Elaboración de Molderia: Escalado</p>
-                        <p>Elaboracion de Ficha Técnica</p>
+                        <p><strong id="somp">Diseño de colecciones</strong></p>
+                        <p><strong id="somp">Dijitalizacion de Moldes</strong></p>
+                        <p><strong id="somp">Elaboracion de Molderia: Molde patrón</p>
+                        <p><strong id="somp">Elaboración de Molderia: Escalado</strong></p>
+                        <p><strong id="somp">Elaboracion de Ficha Técnica</strong></p>
                     </div>
                     <div class="span2">
                         <div class="row">
-                            <p>Elaboración de trazos sistematizados</p>
-                            <p>Plotteo de Trazos</p>
-                            <p>Corte de Prendas</p>
-                            <p>Tiqueteado</p>
+                            <p><strong id="somp">Elaboración de trazos sistematizados</strong></p>
+                            <p><strong id="somp">Plotteo de Trazos</strong></p>
+                            <p><strong id="somp">Corte de Prendas</strong></p>
+                            <p><strong id="somp">Tiqueteado</strong></p>
                         </div>
                     </div>    
                 </div>    
@@ -74,15 +74,29 @@
     </div>
 
     <div id="mod">
-        <p class="muted pull-right"><a  href="#myModal3"  role="button" class="pull-right btn-success btn-small " data-toggle="modal" title="Ver Informacion">Beneficios</a></p>
+        <p class="muted pull-right"><a  href="#myModal3"  role="button" class="pull-right btn btn-success btn-small " data-toggle="modal" title="Ver Informacion">Beneficios</a></p>
        
-        <p class="muted pull-right"><a  href="#myModal2"  role="button" class="pull-right btn-success btn-small" data-toggle="modal" title="Ver Informacion">Proyecto</a></p>
+        <p class="muted pull-right"><a  href="#myModal2"  role="button" class="pull-right btn btn-success btn-small" data-toggle="modal" title="Ver Informacion">Proyecto</a></p>
 
-        <p class="muted pull-right"><a  href="#myModal1"  role="button" class="pull-right btn-success btn-small" data-toggle="modal" title="Ver Informacion">Servicios de Diseño y Molderia</a></p>
+        <p class="muted pull-right"><a  href="#myModal1"  role="button" class="pull-right btn btn-success btn-small" data-toggle="modal" title="Ver Informacion">Servicios de Diseño y Molderia</a></p>
+
+
+ <div class="btn-group btuser" id="mod">
+   <a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#"><i class="   icon-file icon-white "></i>  Documentos</a>
+<ul class="dropdown-menu">                          
 
         <% @documentos.each do |documento| %>
-            <%= link_to 'Precios Servicios Tecnologicos', documento.precios.url, :class => 'btn btn-success btn-small' %>
+             
+        <li><%= link_to "#{documento.precios_file_name}", documento.precios.url, :class => 'btn btn-info btn-small' %></li>
+					
+                                            
+    
+                                        
+                                 
+                             
         <% end %>
+</ul>
+   </div> 
     </div>
 </div>    
    

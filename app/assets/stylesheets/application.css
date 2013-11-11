@@ -13,6 +13,20 @@
  *= require lazybox
  *= require_tree .
  */
+#somp{
+  background-color: #666;
+
+  /*** Rounded Corners ***/
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+   /*** Shadow behind the box ***/
+  -moz-box-shadow:0px -5px 20px #000;
+  -webkit-box-shadow:0px 15px 20px #000;
+}
+ #imgenmod1{
+  background-image: url('confeccio.png');
+  color: #F79029;
+ }
 /*login*/
 
 .btuser{
@@ -39,7 +53,7 @@
 
   /*** Background Gradient - 2 declarations one for Firefox and one for Webkit ***/
   background:  -moz-linear-gradient(19% 75% 90deg,#f1f1f1, #f1f1f1);
-  background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#f2f2f2), to(#f2f2f2));
+  background:  -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f2f2f2), to(#f2f2f2));
 
   /*** Shadow behind the box ***/
   -moz-box-shadow:0px -5px 10px #000;
@@ -98,9 +112,12 @@ p,ol, ul, td {
   border: none;
   box-shadow: none;
 }
-
+#imgen{
+  background-image: url('TopHeader32.png')
+}
 body {
-  background-color: #fff;
+  /*background-image: url('TopHeader32.png');*/
+  padding-top: 200%;
   color: #748bba;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -112,11 +129,14 @@ body {
   width: 75%;
   height: 75%;
   margin: 0 auto;
-  background: #f1f1f1;
+  background: transparent;
   color: #333;
   padding: 20px 40px;
   border: solid 1px #666;
   margin-top: 30px;
+  /*** Shadow behind the box ***/
+  -moz-box-shadow:0px -5px 10px #000;
+  -webkit-box-shadow:0px 15px 20px #000;
 }
 
 #mod{
@@ -135,6 +155,17 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999;
+  /*** Shadow behind the box ***/
+  
+}
+
+#foot{
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  /*** Shadow behind the box ***/
+  -moz-box-shadow:0px -5px 10px #000;
+  -webkit-box-shadow:0px 15px 20px #000;
 }
 
 footer a {
